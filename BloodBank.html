@@ -1,0 +1,207 @@
+
+<!--Blood Donation site contains information about the number of blood banks and applicants willing to 
+Donate blood.
+It should covers the following modules:
+Register, Why to donate blood, who can give blood, Refer a friend, Contact us-->
+<html>
+<head>
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["ename"].value;
+  if (x == "") {
+    alert("Please enter Email");
+    document.getElementById(myForm).focus();
+  }
+var x = document.forms["myForm"]["pname"].value;
+  if (x == "") {
+    alert("Please enter Password");
+    return false;
+  }
+}
+
+function validatearea() {
+var x = document.forms["arform"]["state"].value;
+  if (x == "") {
+    alert("Please select your state");
+    return false;
+  }
+
+  var x = document.forms["arform"]["gname"].value;
+  if (x == "") {
+    alert("Please select Blood Group");
+    return false;
+  }
+
+var x = document.forms["arform"]["cname"].value;
+  if (x == "") {
+    alert("Please Enter your city");
+    return false;
+  }
+
+var x = document.forms["arform"]["aname"].value;
+  if (x == "") {
+    alert("Please Enter your area");
+    return false;
+  }
+ 
+}
+
+function showAlert() {
+    alert ("Welcome to the Register page of Blood donation!!");
+  }
+</script>
+<link rel="stylesheet" href="link.css">
+<title>Bloodbank.com</title>
+</head>
+<body onload="showAlert()">
+
+<div class="login">
+<p><br><br>bloodbank.com<br>A social inhetative</p>
+<section class="donorid">
+    <form method="post" name="myForm" onsubmit="return validateForm()">
+    <input type="text" name="ename" ; placeholder="Email/Mobile" />
+    
+</section>
+    <section class="label1">
+        <h4>Donor Login:</h4>
+        </section>
+        <section class="password">
+       
+        <input type="password" name="pname" placeholder="Password" />
+        
+        </section>
+        <section class="label2">
+        <h4>Password:</h4>
+        </section>
+        <section class="loginbutton">
+            <button onclick="return validateForm()">Login</button>
+        </section>
+</form>
+        </div>
+        <section class="information">
+        <h2 style="background-color: rgba(0,0,0,0.5)"; >
+        <table border="1" height="50" width="100%" style="background-color:rgba(0,0,0,0.0);;">
+            <tr>
+            <td align="center" width="10%"><a href="#" style="color:white;">Register</a></td>   
+            <td align="center" width="10%"><a href="#"style="color:white;">Why to donate Blood</a></td>
+            <td align="center" width="10%"><a href="#"style="color:white;">Who can give Blood</a></td>
+            <td align="center" width="10%"><a href="#"style="color:white;">Refer to a Friend</a></td>
+            <td align="center" width="10%"><a href="#"style="color:white;">Contact us</a></td>
+            </tr>
+            </table>
+        </div>
+        </h2>
+        </section>
+<div class="data">
+<form method="post" name="arform" onsubmit="return validatearea()">
+    <center>
+    <h2>Find a Donor</h2></center>
+    <section class="box">
+        <label>State:</label>
+   <select class="form-control" autocomplete="off" name="state">
+<option value="">-Select State-</option>
+<option value="1">Andhra Pradesh</option>
+<option value="2">Arunachal Pradesh</option>
+<option value="3">Assam</option>
+<option value="4">Bihar</option>
+<option value="5">Chandigarh</option>
+<option value="6">chhattisgarh</option>
+<option value="7">Delhi</option>
+<option value="8">Goa</option>
+<option value="9">Gujarat</option>
+<option value="10">Haryana</option>
+<option value="11">Himachal Pradesh</option>
+<option value="12">Jammu and Kashmir</option>
+<option value="13">Jharkhand</option>
+<option value="14">Karnataka</option>
+<option value="15">Kerala</option>
+<option value="16">Madhya Pradesh</option>
+<option value="17">Maharashtra</option>
+<option value="18">Manipur</option>
+<option value="19">Meghalaya</option>
+<option value="20">Mizoram</option>
+<option value="21">Nagaland</option>
+<option value="0">No State</option>
+<option value="22">Orissa</option>
+<option value="23">Pondichery</option>
+<option value="24">Punjab</option>
+<option value="25">Rajasthan</option>
+<option value="26">Sikkim</option>
+<option value="27">Tamil Nadu</option>
+<option value="28">Tripura</option>
+<option value="29">Uttar Pradesh</option>
+<option value="30">Uttaranchal</option>
+<option value="31">West Bengal</option>
+</select>
+    </section>
+   <section class="box2">
+    <label>Group:</label>
+   <select class="form-control" name="gname" >
+    <option value="">-Select Blood Group-</option>
+    <option value="A1+">A1+</option>
+    <option value="A1-">A1-</option>
+    <option value="A2+">A2+</option>
+    <option value="A2-">A2-</option>
+    <option value="B+">B+</option>
+    <option value="B-">B-</option>
+    <option value="A1B+">A1B+</option>
+    <option value="A1B-">A1B-</option>
+    <option value="A2B+">A2B+</option>
+    <option value="A2B-">A2B-</option>
+    <option value="AB+">AB+</option>
+    <option value="AB-">AB-</option>
+    <option value="O+">O+</option>
+    <option value="O-">O-</option>
+    <option value="A+">A+</option>
+    <option value="A-">A-</option>
+    </select>
+   </section>
+   <section class="box3">
+    <label>City:</label>
+    <input type="text" name="cname" id="cname" placeholder="-City-"; class="form-control">
+   </section>
+   <section class="box4">
+    <label>Area:</label>
+    <input type="text" name="aname" id="aname" placeholder="-Area-"; class="form-control">
+    
+   
+    <section class="searchbutton">
+        <button onclick="return validatearea()">Submit</button>
+     </section>
+   </section>
+    </form></div>
+    <div class="image">
+        </div>
+        <div class="donation-process">
+              <center><h2 style="color:orange;">donation Process</h2></center>
+             <h3 style="color:white;">Step 1: The test</h3>
+             <p style="color:white;">  Want to check if you can donate blood? Take our short quiz on blood donation!</p>
+             <h3 style="color:white;">Step 2: The Donation</h3>
+             <p style="color:white;"> Blood can be donated in a few different ways. “Whole blood donation” is the most common type.
+             his means that<br>your blood is not broken down into any of its parts whilst it is taken.</p>
+             <h3 style="color:white;">Step 3: Storing the Blood</h3>
+                <p style="color:white;">Blood has to be stored in a certain way to protect it from damage. Gaurav’s blood is collected in special blood bags,<br>
+                which are coated with anticoagulation factors to stop the blood from clotting. These bags are designed to make sure<br>
+                that the blood is stored safely and can be transported.</p>
+               <h3 style="color:white;">Step 4: Blood Fractionation</h3>
+               <p style="color:white;">it is separated into its smaller parts. These include: proteins, red blood cells and plasma.</p>
+              </p>
+              </div>
+              <div class="donateplace">
+                <center><h2 style="color:orange;">Where would you like to donate?</h2></center>
+             <section class="form">
+             <form method="post">
+             <input type="text"; style="width: 400px;" />
+             </form>
+             </section>
+             <section class="searchbutton1">
+                <button type="button" onclick="alert('this is just a test')">Search</button>
+             </section>
+             <section class="feedback">
+             <a href="#" style="color:white;">Give Feedback</a>
+             </section>
+            </div>
+
+    </body>
+</html>
+                                                                                                                                                       
